@@ -10,6 +10,8 @@ const API_KEY = 'TBC_LORE_KEY'; // Replace with ENV VAR for security
 
 const proxyPost = (endpoint) => async (req, res) => {
   try {
+	console.log('Incoming headers:', req.headers);
+    console.log('Incoming body:', req.body);
     const response = await fetch(`${BASE_URL}${endpoint}`, {
       method: 'POST',
       headers: {
